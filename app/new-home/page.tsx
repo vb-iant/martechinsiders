@@ -66,13 +66,33 @@ const team = [
 ];
 
 export default function NewHome() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire to /api/contact (Resend) -> hello@martechinsiders.com
-    setSubmitted(true);
-    e.currentTarget.reset();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    // Web3Forms honeypot: if this hidden field is filled in, it's a bot —
+    // let their API silently swallow it rather than special-casing it here.
+    setStatus("sending");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -226,7 +246,10 @@ export default function NewHome() {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} data-submit-to="hello@martechinsiders.com">
+            <form onSubmit={handleSubmit}>
+              <input type="hidden" name="access_key" value="05ca13d7-6f81-4d42-87fe-59423d57482f" />
+              <input type="hidden" name="subject" value="New enquiry — Martech Insiders" />
+              <input type="hidden" name="from_name" value="Martech Insiders website" />
               <div className="mb-[22px]">
                 <label htmlFor="name" className="mb-2 block font-mono text-[0.78rem] tracking-wide text-[#8b8f96]">
                   Name
@@ -267,24 +290,27 @@ export default function NewHome() {
                 />
               </div>
 
-              {/* honeypot - hidden from real users, catches bots */}
-              <div className="absolute -left-[9999px] h-0 overflow-hidden opacity-0" aria-hidden="true">
-                <label htmlFor="company">Company</label>
-                <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
-              </div>
+              {/* Web3Forms' recognized honeypot field - bots fill it in, humans never see it */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
               <button
                 type="submit"
-                className="bg-accent px-7 py-4 font-mono text-[0.88rem] tracking-wide text-void transition-colors hover:bg-paper"
+                disabled={status === "sending"}
+                className="bg-accent px-7 py-4 font-mono text-[0.88rem] tracking-wide text-void transition-colors hover:bg-paper disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send message
+                {status === "sending" ? "Sending…" : "Send message"}
               </button>
               <p className="mt-4 text-[0.88rem] text-[#8b8f96]">
                 Goes straight to our inbox — no CRM, no marketing lists.
               </p>
-              {submitted && (
+              {status === "success" && (
                 <div className="mt-[18px] border-[1.5px] border-accent px-[18px] py-4 font-mono text-[0.92rem] text-accent">
                   Thanks — we&rsquo;ll be in touch shortly.
+                </div>
+              )}
+              {status === "error" && (
+                <div className="mt-[18px] border-[1.5px] border-red-400 px-[18px] py-4 font-mono text-[0.92rem] text-red-400">
+                  Something went wrong — please email us directly at hello@martechinsiders.com.
                 </div>
               )}
             </form>
@@ -326,17 +352,22 @@ export default function NewHome() {
           </div>
         </div>
         <div className="mx-auto mt-11 max-w-[1180px] border-t border-hairline px-8 pt-[26px] text-center text-[0.82rem] leading-[1.8] text-muted">
-          Rockstar CMO Ltd trading as Martech Insiders™ | Company registration no: 11714688 | Registered
-          office: 49 Greek Street, London, W1D 4EG, UK. Martech Insiders is a{" "}
-          <a
-            href="https://trademarks.ipo.gov.uk/ipo-tmcase/page/Results/1/UK00003521957"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent"
-          >
-            registered UK trademark
-          </a>
-          .
+          <p>
+            Rockstar CMO Ltd trading as Martech Insiders™ | Company registration no: 11714688 | Registered
+            office: 49 Greek Street, London, W1D 4EG, UK.
+          </p>
+          <p>
+            Martech Insiders is a{" "}
+            <a
+              href="https://trademarks.ipo.gov.uk/ipo-tmcase/page/Results/1/UK00003521957"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent"
+            >
+              registered UK trademark
+            </a>
+            .
+          </p>
         </div>
       </footer>
     </div>
