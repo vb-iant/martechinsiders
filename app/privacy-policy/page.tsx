@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Martech Insiders",
@@ -241,10 +242,11 @@ export default function PrivacyPolicy() {
             </a>
             .
           </p>
-          <p className="mt-4">
+          <p className="mt-4 flex gap-4">
             <a href="/privacy-policy" className="text-accent">
               Privacy Policy
             </a>
+            <CookiePreferencesLink />
           </p>
         </div>
       </footer>

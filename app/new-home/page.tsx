@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import Script from "next/script";
-
-const GTM_ID = "GTM-KV2KL3XD";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 
 const TAG = "font-mono text-[0.82rem] tracking-wide text-accent inline-block mb-5";
 
@@ -99,26 +97,7 @@ export default function NewHome() {
   }
 
   return (
-    <>
-      {/* Google Tag Manager */}
-      <Script id="gtm-script" strategy="afterInteractive">
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','${GTM_ID}');`}
-      </Script>
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
-      {/* End Google Tag Manager */}
-
-      <div className="font-manrope bg-paper text-void text-lg leading-[1.7]">
+    <div className="font-manrope bg-paper text-void text-lg leading-[1.7]">
       {/* NAV */}
       <header className="sticky top-0 z-10 border-b border-hairline bg-paper/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-[1180px] items-center justify-between px-8 py-[22px]">
@@ -390,14 +369,14 @@ export default function NewHome() {
             </a>
             .
           </p>
-          <p className="mt-4">
+          <p className="mt-4 flex gap-4">
             <a href="/privacy-policy" className="text-accent">
               Privacy Policy
             </a>
+            <CookiePreferencesLink />
           </p>
         </div>
       </footer>
-      </div>
-    </>
+    </div>
   );
 }
