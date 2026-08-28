@@ -390,6 +390,11 @@ export default function NewHome() {
             </a>
             .
           </p>
+          <p className="mt-4">
+            <a href="/privacy-policy" className="text-accent">
+              Privacy Policy
+            </a>
+          </p>
         </div>
       </footer>
       </div>
