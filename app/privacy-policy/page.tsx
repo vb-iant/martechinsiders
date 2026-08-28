@@ -242,7 +242,7 @@ export default function PrivacyPolicy() {
             </a>
             .
           </p>
-          <p className="mt-4 flex gap-4">
+          <p className="mt-4 flex justify-center gap-4">
             <a href="/privacy-policy" className="text-accent">
               Privacy Policy
             </a>
