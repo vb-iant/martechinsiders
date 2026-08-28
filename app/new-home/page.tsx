@@ -57,8 +57,8 @@ const team = [
   {
     initials: "IT",
     name: "Ian Truscott",
-    badge: "MARKETING CHAP",
-    bio: "Ian has done the full martech tour. As a 4x CMO, he understands the buy side, his agency and analyst experience makes him a trusted advisor, and his passion for software started early in his career as a hands-on techie.",
+    badge: "MARKETING ARTIST",
+    bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian has done the full martech tour and learned that the goal of marketing is to create ART — Awareness, Revenue and Trust.",
     quote:
       "\u201CI recommend anyone looking for a voice of reason in the software technology world to seek Ian's input.\u201D",
     cite: "\u2014 Siobhan Fagan, Editor-in-Chief, Reworked",
