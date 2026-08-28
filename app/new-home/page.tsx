@@ -197,23 +197,23 @@ export default function NewHome() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-void text-paper">
+      <section id="contact" className="bg-accent text-void">
         <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-16 px-8 py-24 md:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <span className="font-mono text-[0.82rem] tracking-wide text-accent inline-block mb-5">
+            <span className="font-mono text-[0.82rem] tracking-wide text-void inline-block mb-5">
               [ get in touch ]
             </span>
             <h2 className="mb-[18px] font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">
               Let&rsquo;s talk
             </h2>
-            <p className="mb-[26px] text-[1.1rem] text-[#b8bbc0]">
+            <p className="mb-[26px] text-[1.1rem] text-void/75">
               Whether you&rsquo;re weighing a martech decision or telling a vendor story, we&rsquo;d like to
               hear from you.
             </p>
             <div className="font-mono text-[0.9rem]">
               <div className="mb-[10px]">
                 Email:{" "}
-                <a href="mailto:hello@martechinsiders.com" className="text-accent">
+                <a href="mailto:hello@martechinsiders.com" className="font-semibold text-void underline">
                   hello@martechinsiders.com
                 </a>
               </div>
@@ -223,7 +223,7 @@ export default function NewHome() {
                   href="https://www.linkedin.com/company/martechinsiders"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent"
+                  className="font-semibold text-void underline"
                 >
                   linkedin.com/company/martechinsiders
                 </a>
@@ -237,7 +237,7 @@ export default function NewHome() {
               <input type="hidden" name="subject" value="New enquiry — Martech Insiders" />
               <input type="hidden" name="from_name" value="Martech Insiders website" />
               <div className="mb-[22px]">
-                <label htmlFor="name" className="mb-2 block font-mono text-[0.78rem] tracking-wide text-[#8b8f96]">
+                <label htmlFor="name" className="mb-2 block font-mono text-[0.78rem] tracking-wide text-void/60">
                   Name
                 </label>
                 <input
@@ -245,11 +245,11 @@ export default function NewHome() {
                   name="name"
                   type="text"
                   required
-                  className="w-full border-[1.5px] border-[#363a42] bg-transparent px-4 py-3.5 font-body text-base text-paper focus:border-accent focus:outline-none"
+                  className="w-full border-[1.5px] border-void/30 bg-transparent px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
                 />
               </div>
               <div className="mb-[22px]">
-                <label htmlFor="email" className="mb-2 block font-mono text-[0.78rem] tracking-wide text-[#8b8f96]">
+                <label htmlFor="email" className="mb-2 block font-mono text-[0.78rem] tracking-wide text-void/60">
                   Email
                 </label>
                 <input
@@ -257,13 +257,13 @@ export default function NewHome() {
                   name="email"
                   type="email"
                   required
-                  className="w-full border-[1.5px] border-[#363a42] bg-transparent px-4 py-3.5 font-body text-base text-paper focus:border-accent focus:outline-none"
+                  className="w-full border-[1.5px] border-void/30 bg-transparent px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
                 />
               </div>
               <div className="mb-[22px]">
                 <label
                   htmlFor="message"
-                  className="mb-2 block font-mono text-[0.78rem] tracking-wide text-[#8b8f96]"
+                  className="mb-2 block font-mono text-[0.78rem] tracking-wide text-void/60"
                 >
                   Message
                 </label>
@@ -272,7 +272,7 @@ export default function NewHome() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full resize-y border-[1.5px] border-[#363a42] bg-transparent px-4 py-3.5 font-body text-base text-paper focus:border-accent focus:outline-none"
+                  className="w-full resize-y border-[1.5px] border-void/30 bg-transparent px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
                 />
               </div>
 
@@ -282,20 +282,20 @@ export default function NewHome() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="bg-accent px-7 py-4 font-mono text-[0.88rem] tracking-wide text-void transition-colors hover:bg-paper disabled:cursor-not-allowed disabled:opacity-60"
+                className="bg-void px-7 py-4 font-mono text-[0.88rem] tracking-wide text-accent transition-colors hover:bg-paper hover:text-void disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {status === "sending" ? "Sending…" : "Send message"}
               </button>
-              <p className="mt-4 text-[0.88rem] text-[#8b8f96]">
+              <p className="mt-4 text-[0.88rem] text-void/60">
                 Goes straight to our inbox — no CRM, no marketing lists.
               </p>
               {status === "success" && (
-                <div className="mt-[18px] border-[1.5px] border-accent px-[18px] py-4 font-mono text-[0.92rem] text-accent">
+                <div className="mt-[18px] border-[1.5px] border-void px-[18px] py-4 font-mono text-[0.92rem] text-void">
                   Thanks — we&rsquo;ll be in touch shortly.
                 </div>
               )}
               {status === "error" && (
-                <div className="mt-[18px] border-[1.5px] border-red-400 px-[18px] py-4 font-mono text-[0.92rem] text-red-400">
+                <div className="mt-[18px] border-[1.5px] border-red-900 px-[18px] py-4 font-mono text-[0.92rem] text-red-900">
                   Something went wrong — please email us directly at hello@martechinsiders.com.
                 </div>
               )}
