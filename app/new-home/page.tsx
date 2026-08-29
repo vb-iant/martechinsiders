@@ -58,7 +58,7 @@ const team = [
   {
     initials: "IT",
     name: "Ian Truscott",
-    badge: "MARKETING ARTIST",
+    badge: "MARKET ARTIST",
     bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian has done the full martech tour and learned that the goal of marketing is to create ART — Awareness, Revenue and Trust.",
     quote:
       "\u201CI recommend anyone looking for a voice of reason in the software technology world to seek Ian's input.\u201D",
