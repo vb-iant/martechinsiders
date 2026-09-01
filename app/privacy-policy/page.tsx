@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
         <h2 className="mt-16 mb-5 font-display text-[1.3rem] font-semibold">Contact Details</h2>
         <p className="mb-4 text-[1.05rem] text-muted">
           Martech Insiders – C/O Rockstar CMO Ltd, 49 Greek Street, London, W1D 4EG or use our{" "}
-          <a href="/new-home#contact" className="text-cobalt hover:underline">
+          <a href="/#contact" className="text-cobalt hover:underline">
             contact us form
           </a>
           .
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
         </p>
         <p className="text-[1.05rem] text-muted">
           If you have any questions or feedback on this policy, please{" "}
-          <a href="/new-home#contact" className="text-cobalt hover:underline">
+          <a href="/#contact" className="text-cobalt hover:underline">
             get in touch
           </a>
           .

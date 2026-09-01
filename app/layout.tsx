@@ -37,7 +37,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Martech Insiders™",
-  description: "Martech Insiders — coming soon.",
+  description:
+    "Martech Insiders helps CMS and DXP buyers and vendors make better decisions through experienced, independent advice from practitioners who have spent decades inside the category.",
 };
 
 export default function RootLayout({
