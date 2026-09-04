@@ -37,6 +37,7 @@ const services = [
 const team = [
   {
     initials: "AS",
+    photo: "/team/alex-simonson.png",
     name: "Alex Simonson",
     badge: "SALES SAVANT",
     bio: "Experienced Martech sales leader, Alex leads our commercial operations and client engagements, providing our vendor clients with commercial clarity and sales leadership best practices.",
@@ -47,6 +48,7 @@ const team = [
   },
   {
     initials: "JF",
+    photo: "/team/john-field.png",
     name: "John Field",
     badge: "MARTECH MAVEN",
     bio: "Most recently a Gartner Senior Director Analyst, John is a true Martech Maven, with a two-decade career leading pre-sales, product marketing and product strategy for some of the best-known Martech vendors.",
@@ -57,6 +59,7 @@ const team = [
   },
   {
     initials: "IT",
+    photo: "/team/ian-truscott.png",
     name: "Ian Truscott",
     badge: "MARKETING MACHINIST",
     bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian has done the full martech tour — developing the strategies, the systems, and the stories that power a successful marketing machine.",
@@ -168,9 +171,13 @@ export default function Home() {
           <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
             {team.map((m) => (
               <div key={m.name}>
-                <div className="mb-[22px] flex h-[68px] w-[68px] items-center justify-center border-[1.5px] border-accent font-mono text-[1.05rem] text-accent">
-                  {m.initials}
-                </div>
+                <img
+                  src={m.photo}
+                  alt={m.name}
+                  width={96}
+                  height={96}
+                  className="mb-[22px] h-[96px] w-[96px] border-[1.5px] border-accent object-cover"
+                />
                 <h3 className="font-display text-[1.2rem] font-semibold">{m.name}</h3>
                 <span className="my-[10px] inline-block border-[1.5px] border-cobalt px-3 py-[5px] font-mono text-[0.78rem] tracking-wide text-cobalt">
                   {m.badge}
