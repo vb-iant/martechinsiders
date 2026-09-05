@@ -2,8 +2,14 @@
 // reading content/blog off the local filesystem — no GitHub API call, no
 // GITHUB_TOKEN dependency. Ported from mediasurface's reference
 // implementation (src/app/blog/[slug]/page.tsx) and restyled to MI's
-// typography (Space Grotesk headings, Manrope body, accent/cobalt tokens)
-// matching the conventions established on app/privacy-policy/page.tsx.
+// typography (Space Grotesk headings, Manrope body, accent/cobalt tokens).
+//
+// Hero is full-width (max-w-[1180px], matching the "More from the blog"
+// section below it) with a 60/40 grid: title + tag on the left, a larger
+// author block + date/reading-time on the right, bottom-aligned to the
+// title. A border-hairline rule closes the hero, echoing the same rule
+// used above the related-posts section — the two full-width panels bookend
+// the narrower (760px) reading column in between.
 //
 // A direct URL to a draft's slug 404s, same as a nonexistent slug.
 // Tag list and the primary-tag pill both link to /blog?tag=slug — there's
@@ -21,7 +27,9 @@ import {
   getRelatedPosts,
 } from "@/lib/blog/local-content";
 import { getPrimaryTag, getResolvedTags } from "@/lib/blog/local-tags";
-import { AuthorByline } from "@/components/blog/AuthorByline";
+import { getAuthorBySlug } from "@/lib/blog/local-authors";
+import { normalizeAuthors } from "@/lib/storage/schema";
+import { AuthorAvatar } from "@/components/blog/AuthorAvatar";
 import { PostCard } from "@/components/blog/PostCard";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -58,34 +66,70 @@ export default async function BlogPostPage({
   const allTags = getResolvedTags(post.tags);
   const related = getRelatedPosts(post, 3);
 
+  const authorSlugs = normalizeAuthors(post.author);
+
   return (
     <div className="font-manrope bg-paper text-void">
       <SiteHeader />
 
-      <article className="mx-auto max-w-[760px] px-8 py-24 text-lg leading-[1.7]">
-        <p className="mb-8">
-          <Link href="/blog" className="font-mono text-[0.8rem] tracking-wide text-muted hover:text-cobalt">
-            &larr; BACK TO BLOG
-          </Link>
-        </p>
+      <section className="border-b border-hairline">
+        <div className="mx-auto max-w-[1180px] px-8 pb-16 pt-24">
+          <p className="mb-10">
+            <Link href="/blog" className="font-mono text-[0.8rem] tracking-wide text-muted hover:text-cobalt">
+              &larr; BACK TO BLOG
+            </Link>
+          </p>
 
-        {primaryTag && (
-          <Link
-            href={`/blog?tag=${primaryTag.slug}`}
-            className="mb-5 inline-block border-[1.5px] border-accent px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-accent transition-colors hover:bg-accent hover:text-paper"
-          >
-            {primaryTag.name}
-          </Link>
-        )}
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-[3fr_2fr] md:items-end">
+            <div>
+              {primaryTag && (
+                <Link
+                  href={`/blog?tag=${primaryTag.slug}`}
+                  className="mb-5 inline-block border-[1.5px] border-accent px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-accent transition-colors hover:bg-accent hover:text-paper"
+                >
+                  {primaryTag.name}
+                </Link>
+              )}
+              <h1 className="font-display text-[2.3rem] font-semibold leading-[1.12] tracking-tight sm:text-[3rem]">
+                {post.title}
+              </h1>
+            </div>
 
-        <h1 className="mb-4 font-display text-[2.1rem] font-semibold leading-[1.16] tracking-tight sm:text-[2.5rem]">
-          {post.title}
-        </h1>
-
-        <div className="mb-12 font-mono text-[0.82rem] text-muted">
-          <AuthorByline author={post.author} avatarSize={22} /> · {post.date} · {post.readingTime}
+            <div className="flex flex-col gap-5 md:items-start">
+              {authorSlugs.map((slug) => {
+                const author = getAuthorBySlug(slug);
+                return (
+                  <div key={slug} className="flex items-center gap-4">
+                    <AuthorAvatar author={author} size={64} />
+                    <div className="font-mono text-[0.82rem] leading-snug text-muted">
+                      {author ? (
+                        <Link
+                          href={`/blog/author/${author.slug}`}
+                          className="block font-semibold text-cobalt hover:underline"
+                        >
+                          {author.name}
+                        </Link>
+                      ) : (
+                        <span className="block font-semibold">{slug}</span>
+                      )}
+                      {author?.role && (
+                        <span className="mt-1.5 inline-block border-[1.5px] border-cobalt px-2 py-[3px] text-[0.64rem] tracking-wide text-cobalt">
+                          {author.role}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+              <div className="font-mono text-[0.78rem] text-muted">
+                {post.date} · {post.readingTime}
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
+      <article className="mx-auto max-w-[760px] px-8 py-24 text-lg leading-[1.7]">
         <div className="text-[1.05rem] text-void">
           <ReactMarkdown
             components={{
