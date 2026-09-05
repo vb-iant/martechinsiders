@@ -52,6 +52,9 @@ export function SiteFooter() {
           .
         </p>
         <p className="mt-4 flex justify-center gap-4">
+          <a href="/blog" className="text-accent">
+            Blog
+          </a>
           <a href="/privacy-policy" className="text-accent">
             Privacy Policy
           </a>

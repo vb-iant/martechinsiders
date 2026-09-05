@@ -8,12 +8,20 @@ export function SiteHeader() {
             |
           </span>
         </a>
-        <a
-          href="/#contact"
-          className="border-[1.5px] border-void px-[18px] py-[11px] font-mono text-[0.8rem] tracking-wide transition-colors hover:border-accent hover:bg-accent hover:text-paper"
-        >
-          GET IN TOUCH
-        </a>
+        <div className="flex items-center gap-8">
+          <a
+            href="/blog"
+            className="font-mono text-[0.8rem] tracking-wide text-void transition-colors hover:text-accent"
+          >
+            BLOG
+          </a>
+          <a
+            href="/#contact"
+            className="border-[1.5px] border-void px-[18px] py-[11px] font-mono text-[0.8rem] tracking-wide transition-colors hover:border-accent hover:bg-accent hover:text-paper"
+          >
+            GET IN TOUCH
+          </a>
+        </div>
       </div>
     </header>
   );

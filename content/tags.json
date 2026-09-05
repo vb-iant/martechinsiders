@@ -1,0 +1,6 @@
+[
+  { "id": "martech-strategy", "name": "Martech Strategy", "slug": "martech-strategy" },
+  { "id": "vendor-selection", "name": "Vendor Selection", "slug": "vendor-selection" },
+  { "id": "customer-experience", "name": "Customer Experience", "slug": "customer-experience" },
+  { "id": "ai", "name": "AI", "slug": "ai" }
+]
