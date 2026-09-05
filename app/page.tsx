@@ -252,7 +252,7 @@ export default function Home() {
                   name="name"
                   type="text"
                   required
-                  className="w-full border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
+                  className="w-full border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-hidden"
                 />
               </div>
               <div className="mb-[22px]">
@@ -264,7 +264,7 @@ export default function Home() {
                   name="email"
                   type="email"
                   required
-                  className="w-full border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
+                  className="w-full border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-hidden"
                 />
               </div>
               <div className="mb-[22px]">
@@ -279,7 +279,7 @@ export default function Home() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full resize-y border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-none"
+                  className="w-full resize-y border-[1.5px] border-void/15 bg-paper px-4 py-3.5 font-body text-base text-void focus:border-void focus:outline-hidden"
                 />
               </div>
 

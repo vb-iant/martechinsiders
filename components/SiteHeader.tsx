@@ -1,6 +1,6 @@
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-10 border-b border-hairline bg-paper/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 border-b border-hairline bg-paper/90 backdrop-blur-xs">
       <div className="mx-auto flex max-w-[1180px] items-center justify-between px-8 py-[22px]">
         <a href="/" className="font-display text-[1.1rem] font-bold">
           Martech Insiders<span className="text-accent">™</span>
