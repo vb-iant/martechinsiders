@@ -12,6 +12,9 @@
 // the narrower (760px) reading column in between.
 //
 // A direct URL to a draft's slug 404s, same as a nonexistent slug.
+// An author box (avatar, role, bio, LinkedIn) sits at the bottom of the
+// article, above the tag list — components/blog/AuthorBox.tsx, ported
+// from mediasurface's reference implementation (commit 515f970).
 // Tag list and the primary-tag pill both link to /blog?tag=slug — there's
 // no dedicated tag archive page (deliberately not built upstream either,
 // see mediasurface's CLAUDE.md), so the filtered index is the "tag page."
@@ -30,6 +33,7 @@ import { getPrimaryTag, getResolvedTags } from "@/lib/blog/local-tags";
 import { getAuthorBySlug } from "@/lib/blog/local-authors";
 import { normalizeAuthors } from "@/lib/storage/schema";
 import { AuthorAvatar } from "@/components/blog/AuthorAvatar";
+import { AuthorBox } from "@/components/blog/AuthorBox";
 import { PostCard } from "@/components/blog/PostCard";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -149,6 +153,9 @@ export default async function BlogPostPage({
             {post.body}
           </ReactMarkdown>
         </div>
+
+        <hr className="my-11 border-hairline" />
+        <AuthorBox author={post.author} />
 
         {allTags.length > 0 && (
           <div className="mt-12 flex flex-wrap gap-2.5">
