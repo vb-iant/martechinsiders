@@ -62,7 +62,7 @@ const team = [
     photo: "/team/ian-truscott.png",
     name: "Ian Truscott",
     badge: "CANDID COUNSEL",
-    bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian is a real Insider. He knows the awkward questions because he's asked them, and he'll help you answer them before buyers do.",
+    bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian is a real Insider. He knows the awkward questions from both sides of the table, helping vendors answer them and buyers ask them.",
     quote:
       "\u201CI recommend anyone looking for a voice of reason in the software technology world to seek Ian's input.\u201D",
     cite: "\u2014 Siobhan Fagan, Editor-in-Chief, Reworked",
