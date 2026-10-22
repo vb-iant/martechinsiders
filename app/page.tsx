@@ -40,6 +40,7 @@ const team = [
     photo: "/team/alex-simonson.png",
     name: "Alex Simonson",
     badge: "SALES SAVANT",
+    practice: ["Commercial Advisory", "Sales Leadership"],
     bio: "Experienced Martech sales leader, Alex leads our commercial operations and client engagements, providing our vendor clients with commercial clarity and sales leadership best practices.",
     quote:
       "\u201CA clear communicator, Alex has been extremely effective and has driven the sales and marketing team to a joined up well oiled machine.\u201D",
@@ -51,6 +52,7 @@ const team = [
     photo: "/team/john-field.png",
     name: "John Field",
     badge: "MARTECH MAVEN",
+    practice: ["Analyst Advisory", "Technology Selection"],
     bio: "Most recently a Gartner Senior Director Analyst, John is a true Martech Maven, with a two-decade career leading pre-sales, product marketing and product strategy for some of the best-known Martech vendors.",
     quote:
       "\u201CStarted at a point in our trajectory where we really needed someone to step in and contribute. And boy o' boy did you. I can't thank you enough for everything you've done for us.\u201D",
@@ -62,6 +64,7 @@ const team = [
     photo: "/team/ian-truscott.png",
     name: "Ian Truscott",
     badge: "CANDID COUNSEL",
+    practice: ["Marketing Strategy", "Content & Editorial"],
     bio: "From hands-on techie to 4x CMO, with agency and analyst stops along the way, Ian is a real Insider. He's faced the awkward questions from both sides: what buyers should ask, and how vendors should answer.",
     quote:
       "\u201CI recommend anyone looking for a voice of reason in the software technology world to seek Ian's input.\u201D",
@@ -203,6 +206,14 @@ export default function Home() {
                 <span className="my-[10px] inline-block border-[1.5px] border-cobalt px-3 py-[5px] font-mono text-[0.78rem] tracking-wide text-cobalt">
                   {m.badge}
                 </span>
+                <p className="mb-3 font-mono text-[0.74rem] uppercase leading-[1.6] tracking-wide text-muted">
+                  {m.practice.map((area, i) => (
+                    <span key={area}>
+                      {i > 0 && <span className="mx-1.5 text-accent">/</span>}
+                      {area}
+                    </span>
+                  ))}
+                </p>
                 <p className="min-h-[150px] text-[1.02rem] text-muted">{m.bio}</p>
                 <a
                   href={m.linkedin}
