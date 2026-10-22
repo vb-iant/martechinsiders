@@ -187,7 +187,7 @@ export default function Home() {
       {/* ABOUT US / TEAM */}
       <section className="border-t border-hairline">
         <div className="mx-auto max-w-[1180px] px-8 py-24">
-          <Eyebrow>[ our insiders ]</Eyebrow>
+          <Eyebrow>[ meet the team ]</Eyebrow>
           <h2 className="font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">Our Insiders</h2>
           <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
             {team.map((m) => (
@@ -227,7 +227,7 @@ export default function Home() {
       {/* INSIDER CIRCLE — advisors & partners */}
       <section className="border-t border-hairline">
         <div className="mx-auto max-w-[1180px] px-8 py-24">
-          <Eyebrow>[ insider circle ]</Eyebrow>
+          <Eyebrow>[ partners &amp; advisors ]</Eyebrow>
           <h2 className="font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">The Insider Circle</h2>
           <p className="mt-4 max-w-[640px] text-[1.05rem] text-muted">
             The advisors and partners we work alongside.
