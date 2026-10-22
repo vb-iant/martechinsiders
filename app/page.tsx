@@ -85,7 +85,7 @@ const circle = [
   {
     kind: "PARTNER",
     name: "Torrie Communications",
-    media: { type: "logo" as const, src: "/circle/torrie-communications.png" },
+    media: { type: "logo" as const, src: "/circle/torrie-communications.svg" },
     bio: "Led by experienced AR (Analyst Relations) expert, Beth Torrie, Torrie Communications helps organizations incrementally improve each interaction and meet or exceed their overall goals with industry analysts.",
     link: { href: "https://www.torriecommunications.com", label: "Visit torriecommunications.com →" },
   },
