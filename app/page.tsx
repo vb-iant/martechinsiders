@@ -70,6 +70,27 @@ const team = [
   },
 ];
 
+// The Insider Circle: advisors and partners outside the core team. Both kinds
+// share one 96px-tall media slot so names and badges line up whatever the
+// image shape — a square headshot sits like the team photos, a wide logo is
+// contained within the slot, left-aligned.
+const circle = [
+  {
+    kind: "ADVISOR",
+    name: "Jeff Clark",
+    media: { type: "photo" as const, src: "/circle/jeff-clark.jpg" },
+    bio: "Independent marketing consultant with extensive experience running high-tech marketing teams and a former Research Director at Forrester Research.",
+    link: { href: "https://www.linkedin.com/in/jjclark08/", label: "Connect on LinkedIn →" },
+  },
+  {
+    kind: "PARTNER",
+    name: "Torrie Communications",
+    media: { type: "logo" as const, src: "/circle/torrie-communications.png" },
+    bio: "Led by experienced AR (Analyst Relations) expert, Beth Torrie, Torrie Communications helps organizations incrementally improve each interaction and meet or exceed their overall goals with industry analysts.",
+    link: { href: "https://www.torriecommunications.com", label: "Visit torriecommunications.com →" },
+  },
+];
+
 export default function Home() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -166,8 +187,8 @@ export default function Home() {
       {/* ABOUT US / TEAM */}
       <section className="border-t border-hairline">
         <div className="mx-auto max-w-[1180px] px-8 py-24">
-          <Eyebrow>[ about us ]</Eyebrow>
-          <h2 className="font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">Meet the Team</h2>
+          <Eyebrow>[ our insiders ]</Eyebrow>
+          <h2 className="font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">Our Insiders</h2>
           <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
             {team.map((m) => (
               <div key={m.name}>
@@ -197,6 +218,53 @@ export default function Home() {
                 <cite className="block pl-[18px] font-mono text-[0.8rem] not-italic text-muted">
                   {m.cite}
                 </cite>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INSIDER CIRCLE — advisors & partners */}
+      <section className="border-t border-hairline">
+        <div className="mx-auto max-w-[1180px] px-8 py-24">
+          <Eyebrow>[ insider circle ]</Eyebrow>
+          <h2 className="font-display text-[1.8rem] font-semibold sm:text-[2.1rem]">The Insider Circle</h2>
+          <p className="mt-4 max-w-[640px] text-[1.05rem] text-muted">
+            The advisors and partners we work alongside.
+          </p>
+          <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3">
+            {circle.map((c) => (
+              <div key={c.name} className="border-t-[3px] border-hairline pt-7">
+                <div className="mb-[22px] flex h-[96px] items-center">
+                  {c.media.type === "photo" ? (
+                    <img
+                      src={c.media.src}
+                      alt={c.name}
+                      width={96}
+                      height={96}
+                      className="h-[96px] w-[96px] border-[1.5px] border-accent object-cover"
+                    />
+                  ) : (
+                    <img
+                      src={c.media.src}
+                      alt={`${c.name} logo`}
+                      className="h-auto max-h-[60px] w-auto max-w-full object-contain object-left"
+                    />
+                  )}
+                </div>
+                <h3 className="font-display text-[1.2rem] font-semibold">{c.name}</h3>
+                <span className="my-[10px] inline-block border-[1.5px] border-cobalt px-3 py-[5px] font-mono text-[0.78rem] tracking-wide text-cobalt">
+                  {c.kind}
+                </span>
+                <p className="mb-4 text-[1.02rem] text-muted">{c.bio}</p>
+                <a
+                  href={c.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block font-mono text-[0.78rem] tracking-wide text-cobalt hover:underline"
+                >
+                  {c.link.label}
+                </a>
               </div>
             ))}
           </div>
