@@ -78,7 +78,7 @@ const circle = [
   {
     kind: "ADVISOR",
     name: "Jeff Clark",
-    media: { type: "photo" as const, src: "/circle/jeff-clark.jpg" },
+    media: { type: "photo" as const, src: "/circle/jeff-clark.png" },
     bio: "Independent marketing consultant with extensive experience running high-tech marketing teams and a former Research Director at Forrester Research.",
     link: { href: "https://www.linkedin.com/in/jjclark08/", label: "Connect on LinkedIn →" },
   },
