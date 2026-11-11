@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy | Martech Insiders",
-  description: "Privacy policy",
-};
+  description: "How Martech Insiders collects, uses and protects your personal data.",
+  path: "/privacy-policy",
+  image: "/opengraph-image",
+});
 
 const TAG = "font-mono text-[0.82rem] tracking-wide text-accent inline-block mb-5";
 

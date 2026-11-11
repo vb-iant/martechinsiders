@@ -21,6 +21,7 @@
 // Related posts reuse the same PostCard grid as the index.
 
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
@@ -50,10 +51,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getLocalPost(slug);
   if (!post) return {};
-  return {
+  return pageMetadata({
     title: `${post.seoTitle ?? post.title} | Martech Insiders`,
     description: post.seoDescription ?? post.excerpt,
-  };
+    path: `/blog/${slug}`,
+    type: "article",
+  });
 }
 
 export default async function BlogPostPage({
