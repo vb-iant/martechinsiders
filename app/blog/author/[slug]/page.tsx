@@ -9,6 +9,7 @@
 // published posts, rather than rendering an empty/broken page.
 
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -32,7 +33,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const author = getAuthorBySlug(slug);
   if (!author) return {};
-  return { title: `${author.name} | Martech Insiders Blog` };
+  return pageMetadata({
+    title: `${author.name} | Martech Insiders Blog`,
+    description: `Posts by ${author.name} on the Martech Insiders blog.`,
+    path: `/blog/author/${slug}`,
+    image: "/blog/opengraph-image",
+  });
 }
 
 export default async function AuthorArchivePage({

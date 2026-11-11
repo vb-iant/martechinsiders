@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div>
           <h3 className="mb-4 font-display text-[1.2rem] font-bold">Martech Insiders™</h3>
           <p className="max-w-[44ch] text-[1.02rem] text-[#b8bbc0]">
-            Martech Insiders helps CMS and DXP buyers and vendors make better decisions through experienced,
+            Martech Insiders helps marketing technology buyers and vendors make better decisions through experienced,
             independent advice from practitioners who have spent decades inside the category.
           </p>
         </div>

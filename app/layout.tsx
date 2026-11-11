@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Space_Grotesk, Lato, Manrope, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -37,9 +38,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.martechinsiders.com"),
-  title: "Martech Insiders™",
-  description:
-    "Martech Insiders helps CMS and DXP buyers and vendors make better decisions through experienced, independent advice from practitioners who have spent decades inside the category.",
+  ...pageMetadata({
+    title: "Martech Insiders™",
+    description:
+      "Martech Insiders helps marketing technology buyers and vendors make better decisions through experienced, independent advice from practitioners who have spent decades inside the category.",
+    path: "/",
+  }),
 };
 
 export default function RootLayout({

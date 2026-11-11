@@ -4,13 +4,15 @@
 // rendering trade-off.
 
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { BlogIndexContent } from "@/components/blog/BlogIndexContent";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Blog | Martech Insiders",
   description:
     "Independent perspective on martech, CMS and DXP strategy from the Martech Insiders team.",
-};
+  path: "/blog",
+});
 
 export default async function BlogIndexPage({
   searchParams,
