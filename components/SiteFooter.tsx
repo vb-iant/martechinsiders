@@ -36,11 +36,8 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto mt-11 max-w-[1180px] border-t border-[#2a2d33] px-8 pt-[26px] text-center text-[0.82rem] leading-[1.8] text-[#8b8f96]">
         <p>
-          Rockstar CMO Ltd trading as Martech Insiders™ | Company registration no: 11714688 | Registered
-          office: 49 Greek Street, London, W1D 4EG, UK.
-        </p>
-        <p>
-          Martech Insiders is a{" "}
+          Rockstar CMO Ltd trading as Martech Insiders™ | Company registration no: 11714688 | Martech
+          Insiders is a{" "}
           <a
             href="https://trademarks.ipo.gov.uk/ipo-tmcase/page/Results/1/UK00003521957"
             target="_blank"
@@ -49,9 +46,11 @@ export function SiteFooter() {
           >
             registered UK trademark
           </a>
-          .
         </p>
         <p className="mt-4 flex justify-center gap-4">
+          <a href="/faq" className="text-accent">
+            FAQ
+          </a>
           <a href="/privacy-policy" className="text-accent">
             Privacy Policy
           </a>
