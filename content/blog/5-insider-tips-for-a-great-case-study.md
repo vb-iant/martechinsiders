@@ -4,7 +4,7 @@ slug: "5-insider-tips-for-a-great-case-study"
 date: "2026-11-27"
 author: "ian-truscott"
 tags:
-  - martech-strategy
+  - vendor-advisory
 excerpt: "Most vendors publish customer success stories, but buyers are looking for case studies, and there is a difference. Here's how to give buyers what they need, based on insights from our team who have been on both sides of the table."
 ---
 
