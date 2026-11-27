@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ContactForm } from "@/components/ContactForm";
 import { LatestInsights } from "@/components/blog/LatestInsights";
 
 const TAG = "font-mono text-[0.82rem] tracking-wide text-accent inline-block mb-5";
@@ -123,7 +122,7 @@ export default function Home() {
             decisions.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-void px-[26px] py-4 font-mono text-[0.88rem] tracking-wide text-paper transition-colors hover:bg-accent"
           >
             Get in touch
@@ -149,7 +148,7 @@ export default function Home() {
             ))}
           </div>
           <a
-            href="#contact"
+            href="/contact"
             className="mt-11 inline-block bg-void px-[26px] py-4 font-mono text-[0.88rem] tracking-wide text-paper transition-colors hover:bg-accent"
           >
             Get in touch
@@ -290,8 +289,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <ContactForm />
+          <div className="flex flex-col items-start justify-center border-[1.5px] border-paper/40 p-10">
+            <p className="mb-7 font-display text-[1.35rem] font-semibold leading-snug">
+              Tell us what you&rsquo;re working on and we&rsquo;ll get back to you.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block bg-void px-7 py-4 font-mono text-[0.88rem] tracking-wide text-accent transition-colors hover:bg-paper hover:text-void"
+            >
+              Send us a message
+            </a>
           </div>
         </div>
       </section>

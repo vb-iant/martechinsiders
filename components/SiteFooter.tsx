@@ -31,6 +31,12 @@ export function SiteFooter() {
                 linkedin.com/company/martechinsiders
               </a>
             </div>
+            <div className="mt-[10px]">
+              Say hello:{" "}
+              <a href="/contact" className="text-accent">
+                martechinsiders.com/contact
+              </a>
+            </div>
           </div>
         </div>
       </div>

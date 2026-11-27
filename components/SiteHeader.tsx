@@ -16,7 +16,7 @@ export function SiteHeader() {
             INSIGHTS
           </a>
           <a
-            href="/#contact"
+            href="/contact"
           className="whitespace-nowrap border-[1.5px] border-void px-2.5 py-[9px] font-mono text-[0.7rem] tracking-wide sm:px-[18px] sm:py-[11px] sm:text-[0.8rem] transition-colors hover:border-accent hover:bg-accent hover:text-paper"
         >
             GET IN TOUCH
