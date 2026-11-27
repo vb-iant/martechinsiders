@@ -156,6 +156,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INSIDER INSIGHTS — latest blog posts */}
+      <LatestInsights />
+
       {/* ABOUT US / TEAM */}
       <section className="border-t border-hairline">
         <div className="mx-auto max-w-[1180px] px-8 py-24">
@@ -250,9 +253,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* INSIDER INSIGHTS — latest blog posts */}
-      <LatestInsights />
 
       {/* CONTACT */}
       <section id="contact" className="bg-accent text-paper">
