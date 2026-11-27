@@ -297,7 +297,7 @@ export default function Home() {
               href="/contact"
               className="inline-block bg-void px-7 py-4 font-mono text-[0.88rem] tracking-wide text-accent transition-colors hover:bg-paper hover:text-void"
             >
-              Send us a message
+              Get in touch
             </a>
           </div>
         </div>
