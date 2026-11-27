@@ -26,6 +26,7 @@ import { getAllTags, getTagBySlug } from "@/lib/blog/local-tags";
 import { PostCard } from "@/components/blog/PostCard";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LetsTalk } from "@/components/LetsTalk";
 import type { PostSummary, Tag } from "@/lib/storage/schema";
 
 export const BLOG_PAGE_SIZE = 9;
@@ -138,6 +139,8 @@ export function BlogIndexContent({
           </div>
         )}
       </main>
+
+      <LetsTalk />
 
       <SiteFooter />
     </div>
