@@ -5,12 +5,14 @@ date: "2026-10-27"
 author: "john-field"
 tags:
   - analyst-relations
-excerpt: "Despite the rise of AI, and before that, peer reviews, social selling and content marketing, the big analyst firms like Forrester, Gartner and IDC are still hugely influential in shaping software categories and markets, especially in the risk-averse world of the big corporates. Here are some tips from someone who’s seen their fair share of briefings, both good and bad."
+excerpt: "Skip the pain, lead with outcomes, and demo a product that works. A former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship."
 ---
 
-*Despite the rise of AI, and before that, peer reviews, social selling and content marketing, the big analyst firms like Forrester, Gartner and IDC are still hugely influential in shaping software categories and markets, especially in the risk-averse world of the big corporates. Here are some tips from someone who’s seen their fair share of briefings, both good and bad.*
+*Skip the pain, lead with outcomes, and demo a product that works. A former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship.*
 
 ---
+
+Despite the rise of AI, and before that, peer reviews, social selling and content marketing, the big analyst firms like Forrester, Gartner and IDC are still hugely influential in shaping software categories and markets, especially in the risk-averse world of the big corporates.
 
 Cynics might suggest analyst relations is simple – it's “pay to play”, but smaller vendors can brief analysts. Access and influence aren't just for those paying a hefty subscription; in fact, those who treat their seat in this way are missing the point (but that’s for another post). It's an analyst's job to be curious and understand the market, and they will usually welcome the conversation.
 

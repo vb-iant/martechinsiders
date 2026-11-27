@@ -5,9 +5,10 @@
 // typography (Space Grotesk headings, Manrope body, accent/cobalt tokens).
 //
 // Hero is full-width (max-w-[1180px], matching the "More from the blog"
-// section below it) with a 60/40 grid: title + tag on the left, a larger
-// author block + date/reading-time on the right, bottom-aligned to the
-// title. A border-hairline rule closes the hero, echoing the same rule
+// section below it). The primary-tag pill sits above a 60/40 grid: title on
+// the left, author block (64px avatar) + date/reading-time on the right,
+// top-aligned with the title rather than the pill. (The AuthorBox at the
+// foot of the post uses a larger 120px avatar.) A border-hairline rule closes the hero, echoing the same rule
 // used above the related-posts section — the two full-width panels bookend
 // the narrower (760px) reading column in between.
 //
@@ -93,16 +94,17 @@ export default async function BlogPostPage({
             </Link>
           </p>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-[3fr_2fr] md:items-end">
+          {primaryTag && (
+            <Link
+              href={`/blog?tag=${primaryTag.slug}`}
+              className="mb-5 inline-block border-[1.5px] border-accent px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-accent transition-colors hover:bg-accent hover:text-paper"
+            >
+              {primaryTag.name}
+            </Link>
+          )}
+
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-[3fr_2fr] md:items-start">
             <div>
-              {primaryTag && (
-                <Link
-                  href={`/blog?tag=${primaryTag.slug}`}
-                  className="mb-5 inline-block border-[1.5px] border-accent px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-accent transition-colors hover:bg-accent hover:text-paper"
-                >
-                  {primaryTag.name}
-                </Link>
-              )}
               <h1 className="font-display text-[2.3rem] font-semibold leading-[1.12] tracking-tight sm:text-[3rem]">
                 {post.title}
               </h1>
@@ -113,7 +115,7 @@ export default async function BlogPostPage({
                 const author = getAuthorBySlug(slug);
                 return (
                   <div key={slug} className="flex items-center gap-4">
-                    <AuthorAvatar author={author} size={120} />
+                    <AuthorAvatar author={author} size={64} />
                     <div className="font-mono text-[0.82rem] leading-snug text-muted">
                       {author ? (
                         <Link
