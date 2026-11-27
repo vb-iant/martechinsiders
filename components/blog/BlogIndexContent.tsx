@@ -42,7 +42,11 @@ export function BlogIndexContent({
   tagSlug?: string;
 }) {
   const allPosts = getLocalPosts();
-  const tags = getAllTags();
+  // Only offer filter buttons for tags at least one published post uses —
+  // empty categories stay defined in content/tags.json (keeping accent
+  // colour indexes stable) but don't appear until something is filed there.
+  const usedTagSlugs = new Set(allPosts.flatMap((p) => p.tags ?? []));
+  const tags = getAllTags().filter((t) => usedTagSlugs.has(t.slug));
 
   const unfilteredTotalPages = getUnfilteredBlogPageCount();
   if (currentPage > unfilteredTotalPages || currentPage < 1) {
