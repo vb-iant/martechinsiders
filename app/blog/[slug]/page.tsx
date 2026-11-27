@@ -113,7 +113,7 @@ export default async function BlogPostPage({
                 const author = getAuthorBySlug(slug);
                 return (
                   <div key={slug} className="flex items-center gap-4">
-                    <AuthorAvatar author={author} size={64} />
+                    <AuthorAvatar author={author} size={120} />
                     <div className="font-mono text-[0.82rem] leading-snug text-muted">
                       {author ? (
                         <Link

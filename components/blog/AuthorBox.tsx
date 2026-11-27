@@ -29,7 +29,7 @@ export function AuthorBox({ author }: { author: string | string[] }) {
     <div className="my-11 flex flex-col gap-6">
       {authors.map((a) => (
         <div key={a.slug} className="flex items-start gap-5 border-[1.5px] border-hairline p-7">
-          <AuthorAvatar author={a} size={64} />
+          <AuthorAvatar author={a} size={120} />
           <div>
             <h3 className="mb-1 font-display text-[1.05rem] font-semibold">
               <Link href={`/blog/author/${a.slug}`} className="hover:text-cobalt">
