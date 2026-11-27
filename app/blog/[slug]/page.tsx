@@ -19,12 +19,18 @@
 // no dedicated tag archive page (deliberately not built upstream either,
 // see mediasurface's CLAUDE.md), so the filtered index is the "tag page."
 // Related posts reuse the same PostCard grid as the index.
+//
+// remark-gfm enables GFM footnotes ([^1] refs + [^1]: definitions). The
+// footnote definitions render as a section[data-footnotes] at the end of
+// the body, styled in globals.css; its auto-generated "Footnotes" h2
+// (id="footnote-label") is swapped for the site's mono "[ sources ]" label.
 
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   getLocalPost,
   getLocalPublishedSlugs,
@@ -139,10 +145,20 @@ export default async function BlogPostPage({
       <article className="mx-auto max-w-[760px] px-8 py-24 text-lg leading-[1.7]">
         <div className="text-[1.05rem] text-void">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
-              h2: (props) => (
-                <h2 className="mb-5 mt-16 font-display text-[1.3rem] font-semibold" {...props} />
-              ),
+              h2: ({ node: _node, ...props }) =>
+                props.id === "footnote-label" ? (
+                  <h2
+                    id={props.id}
+                    className="mb-4 font-mono text-[0.82rem] font-normal tracking-wide text-accent"
+                  >
+                    [ sources ]
+                  </h2>
+                ) : (
+                  <h2 className="mb-5 mt-16 font-display text-[1.3rem] font-semibold" {...props} />
+                ),
+              em: (props) => <em className="text-void" {...props} />,
               p: (props) => <p className="my-4 leading-[1.75] text-muted" {...props} />,
               a: (props) => <a className="text-cobalt hover:underline" {...props} />,
               ul: (props) => (

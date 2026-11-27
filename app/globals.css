@@ -57,3 +57,34 @@ body {
 .cursor-blink {
   animation: blink 1s steps(1) infinite;
 }
+
+/* Blog post footnotes (remark-gfm). Inline refs render as small accent
+   superscripts; the definitions section closes the article body under a
+   hairline, in smaller muted type. See app/blog/[slug]/page.tsx. */
+article sup a[data-footnote-ref] {
+  margin-left: 0.1em;
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+article sup a[data-footnote-ref]::before { content: "["; }
+article sup a[data-footnote-ref]::after { content: "]"; }
+
+article section[data-footnotes] {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-hairline);
+  font-size: 0.88rem;
+}
+article section[data-footnotes] ol {
+  margin-top: 0;
+}
+article section[data-footnotes] li p {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+}
+article section[data-footnotes] a[data-footnote-backref] {
+  margin-left: 0.35em;
+  text-decoration: none;
+}
