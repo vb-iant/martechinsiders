@@ -1,64 +1,74 @@
 ---
-title: "Martech: Clarity Before Commitment"
+title: "Martech: Clarity Before Capability"
 slug: "martech-clarity-before-commitment"
 date: "2026-09-07"
 author: "ian-truscott"
 tags:
   - martech-strategy
   - vendor-selection
-excerpt: "Marketing technology can accelerate growth or quietly drain ROI. Here's a structured approach to make sure your tech stack supports a clear, aligned and commercially effective Revenue Department."
+excerpt: "Marketing technology can be a revenue engine or a “frankenstack” money pit of shadow tools and unused features. Drawing on time spent on both sides of the table, Ian argues the real risk isn't picking the wrong tool – it's picking one before you've defined the revenue system it needs to support."
 ---
 
-Sales and marketing are now inseparable from technology; it's a necessary budget line item, and the decisions about where to place that bet, in terms of time and money, can be business-critical.
+*Marketing technology can be a revenue engine or a “frankenstack” money pit of shadow tools and unused features. Drawing on time spent on both sides of the table, Ian argues the real risk isn't picking the wrong tool – it's picking one before you've defined the revenue system it needs to support.*
 
-It's an obvious statement, but it's something we often find our clients grappling with.
+---
 
-## The right mix and the wrong mix
+Sales and marketing operations are now inseparable from technology, and decisions about where to place that bet, in time and money, can be business-critical.
 
-The right marketing technology mix, especially when blended with emerging AI agent functionality, can deliver incredible process efficiencies, deep customer insights, a seamless digital customer experience, and internal visibility across the entire customer engagement, from awareness to revenue.
+The right marketing technology mix, especially when blended with emerging AI agent functionality, can deliver process efficiencies, deep customer insights, a seamless digital customer experience, and internal visibility across the entire customer engagement, from awareness to revenue.
 
-The wrong marketing technology mix can be a money pit of fragile duct-tape integrations, manual data wrangling (usually in spreadsheets), fractured customer engagement, budget-sapping shiny features that nobody uses, and shards of data spread across a myriad of $99/month solutions.
+The wrong marketing technology mix can be a money pit of fragile duct-tape integrations, manual data wrangling (usually in spreadsheets), fractured customer engagement, budget-sapping shiny features nobody uses, and data shards spread across a myriad of solutions.
 
-Then, when the business asks a question about sales and marketing performance, wants to launch a new product, add a new channel, or change a message, the answer is, "We'll get back to you."
+## Frankenstack in the shadows
 
-And when you ask sales to update the CRM with the critical data that drives the business, you get that eyeroll. You know the one.
+Shadow marketing tech makes it worse, and every organization has it, from the tempting $99/month (or more) solutions that get dropped into expenses, to personal AI assistants developing vibe-coded workarounds.
 
-But maybe worse than all of this is that you are saddled with a fixed cost that negatively impacts your marketing ROI, because you can't confidently attribute it to revenue.
+They are “frankenstacks”, often built over time, based on short-term tactical feature needs rather than a roadmap defined by the revenue system or process the technology needs to enable.
 
-In any business, a poorly implemented platform is a business risk.
+And when you ask sales to update the CRM with the critical data that drives the business, you get that eye roll. You know the one.
 
-## Not more tech, better outcomes
+The result: when the business asks a question about sales and marketing performance, wants to launch a new product, add a new channel, or change a message, the answer is, “We’ll get back to you.”
 
-What the revenue departments in these organizations need is not more technology, but confidence in their revenue engine and in the technology that connects and aligns the Revenue Department (what we call the joint sales and marketing function).
+But maybe worse than all of this is being saddled with a fixed cost you can't confidently tie to revenue, which makes your marketing ROI hard to defend. That's budget that should be on the front line, delivering value.
 
-And of course, navigating the vendor marketplace for a solution to this doesn't help; there are hundreds of options, with overlapping capabilities, all selling an aspiration of a future need rather than addressing the operational challenges of the business today.
+What today’s sales and marketing leaders need isn't more technology, but confidence in their revenue engine and in the technology that connects and aligns what I call the Revenue Department (the joint sales and marketing function).
 
-It can also be tempting to experiment with "vibe coding" a rapid, AI-built solution to address an immediate gap.
+## Vendors can’t help themselves
 
-And it's easy to get swept up in the shiny thing du jour, distracted from solving the immediate need. Especially when one of your team is giving you the big eyes and saying, "But it's so shiny!"
+Navigating the vendor marketplace for a solution doesn’t help; there are hundreds of options with overlapping capabilities, all selling an aspiration of a future need rather than addressing the business's operational challenges today.
 
-## Dealing with FOMU
+We’ve been on that side of the table, encouraged to sell the roadmap, not the product, using category language that does nothing to help the buyer differentiate between solutions.
 
-Faced with this, the FOMU (Fear of Messing Up) when it comes to choosing the right technology is very real.
+But, as a buyer, it’s easy to get swept up in the shiny thing du jour and get distracted from solving the immediate need.
 
-- What if we are overbuying features we don't need?
-- What if we are underbuying and not future-proofing our capabilities?
+*Especially when one of your team is giving you the big eyes and saying, “But it’s so shiny!”*
+
+## FOMU is real
+
+Faced with this, FOMU (Fear of Messing Up) when choosing the right technology is very real, and you ask yourself questions like:
+
+- What if we are overbuying features we don’t need?
+- What if we underbuy and don't future-proof our capabilities?
 - How hard is this going to be to implement?
 - Are there hidden costs?
 - What will my team and peers think of using it?
 - If I get this wrong, will we be back here in a year?
 - Do I really need more, or can we get what we have working?
 
-The real risk isn't choosing the wrong tool. It's choosing a tool before defining the revenue system it needs to support.
+The real risk isn’t choosing the wrong tool. It’s choosing a tool before defining the revenue system it needs to support.
 
-## 5 questions to ask
+## Clarity first: five questions
 
-So, at this point, I encourage revenue leaders to pause and consider a few questions:
+Before buying anything, I encourage revenue leaders to pause and ask:
 
 1. What is our revenue process? What information and metrics do we need at each stage, and how should that data flow through the business?
-2. What are our audience's key touch points, how do we want to show up at each of them, and what engagement data do we need?
+2. What are our audience's key touchpoints, how do we want to show up at each of them, and what engagement data do we need?
 3. What are our functional requirements based on 1 & 2?
-4. What do we already have that can meet those requirements? What are the total costs? Where are the overlaps, gaps, and maybe unused functionality we don't need?
+4. What do we already have that can meet those requirements? What are the total costs? Where are the overlaps, gaps, and maybe unused functionality?
 5. What capabilities and skills, both internal and external through our existing trusted agencies, do we have to support these needs?
 
-We've seen many examples where a simple audit, viewed through the eyes of an experienced marketing technologist, can not only unlock marketing capability but also simplify a marketing stack, putting budget back into front-line marketing where it will see a return and improve the performance of the whole Revenue Department.
+## Start with what you already have
+
+We’ve seen many examples where a simple audit, viewed through the eyes of an experienced marketing technologist, can unlock marketing capability and simplify a marketing stack, putting budget back into front-line marketing where it will drive returns and improve the performance of the whole Revenue Department.
+
+*Standing at a crossroads with your marketing tech stack, or feel something's a little off? (It probably is.) [Get in touch](https://www.martechinsiders.com/contact). We love to chat about tech.*
