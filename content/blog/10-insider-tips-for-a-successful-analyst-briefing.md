@@ -5,10 +5,10 @@ date: "2026-11-15"
 author: "john-field"
 tags:
   - analyst-relations
-excerpt: "Skip the pain, lead with outcomes, and demo a product that works. A former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship."
+excerpt: "Skip the pain, lead with outcomes, and demo a product that works. Our former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship."
 ---
 
-*Skip the pain, lead with outcomes, and demo a product that works. A former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship.*
+*Skip the pain, lead with outcomes, and demo a product that works. Our former industry analyst who has sat on both sides of the table shares ten practical, hard-won tips for briefing big analyst firms like Gartner, Forrester and IDC – and turning that first briefing into a long and lasting relationship.*
 
 ---
 
