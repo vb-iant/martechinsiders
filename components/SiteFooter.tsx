@@ -55,6 +55,10 @@ export function SiteFooter() {
             Privacy Policy
           </a>
           <CookiePreferencesLink />
+          {/* Stand-in until there are enough pages to justify a footer nav. */}
+          <a href="/blog" className="text-accent">
+            Blog
+          </a>
         </p>
       </div>
     </footer>

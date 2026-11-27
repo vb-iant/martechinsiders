@@ -9,6 +9,7 @@
 // published posts, rather than rendering an empty/broken page.
 
 import type { Metadata } from "next";
+import { formatPostDate } from "@/lib/blog/format-date";
 import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -98,7 +99,7 @@ export default async function AuthorArchivePage({
                   {post.title}
                 </Link>
               </h3>
-              <div className="font-mono text-[0.78rem] text-muted">{post.date}</div>
+              <div className="font-mono text-[0.78rem] text-muted">{formatPostDate(post.date)}</div>
             </li>
           ))}
         </ul>

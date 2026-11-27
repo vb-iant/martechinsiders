@@ -11,6 +11,7 @@
 // accents (lib/og/martechinsiders-config.ts).
 
 import Link from "next/link";
+import { formatPostDate } from "@/lib/blog/format-date";
 import type { PostSummary } from "@/lib/storage/schema";
 import { getPrimaryTag, accentIndexForTag } from "@/lib/blog/local-tags";
 import { AuthorByline } from "@/components/blog/AuthorByline";
@@ -45,7 +46,7 @@ export function PostCard({ post, index }: { post: PostSummary; index: number }) 
         <p className="mb-4 font-manrope text-[0.95rem] leading-relaxed text-muted">{post.excerpt}</p>
       )}
       <div className="font-mono text-[0.76rem] text-muted">
-        <AuthorByline author={post.author} /> · {post.date}
+        <AuthorByline author={post.author} /> · {formatPostDate(post.date)}
       </div>
     </div>
   );

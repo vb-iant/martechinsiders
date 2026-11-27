@@ -27,6 +27,7 @@
 // (id="footnote-label") is swapped for the site's mono "[ sources ]" label.
 
 import type { Metadata } from "next";
+import { formatPostDate } from "@/lib/blog/format-date";
 import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -137,7 +138,7 @@ export default async function BlogPostPage({
                 );
               })}
               <div className="font-mono text-[0.78rem] text-muted">
-                {post.date} · {post.readingTime}
+                {formatPostDate(post.date)} · {post.readingTime}
               </div>
             </div>
           </div>

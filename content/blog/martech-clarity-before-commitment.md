@@ -1,7 +1,7 @@
 ---
 title: "Martech: Clarity Before Capability"
 slug: "martech-clarity-before-commitment"
-date: "2026-09-07"
+date: "2026-10-27"
 author: "ian-truscott"
 tags:
   - martech-strategy

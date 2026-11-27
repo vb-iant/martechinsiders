@@ -1,7 +1,7 @@
 ---
 title: "10 Insider Tips for a Successful Analyst Briefing"
 slug: "10-insider-tips-for-a-successful-analyst-briefing"
-date: "2026-10-27"
+date: "2026-11-15"
 author: "john-field"
 tags:
   - analyst-relations
