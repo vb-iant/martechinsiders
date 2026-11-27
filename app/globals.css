@@ -84,7 +84,7 @@ article section[data-footnotes] li p {
   margin: 0.25rem 0;
   line-height: 1.6;
 }
+/* Back-to-text arrows hidden by choice — the source list stays clean. */
 article section[data-footnotes] a[data-footnote-backref] {
-  margin-left: 0.35em;
-  text-decoration: none;
+  display: none;
 }

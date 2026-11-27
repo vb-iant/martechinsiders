@@ -1,5 +1,5 @@
 ---
-title: "5 insider tips for a great case study"
+title: "5 Insider Tips for a Great Case Study"
 slug: "5-insider-tips-for-a-great-case-study"
 date: "2026-11-27"
 author: "ian-truscott"
@@ -9,6 +9,8 @@ excerpt: "Most vendors publish customer success stories, but buyers are looking 
 ---
 
 *Most vendors publish customer success stories, but buyers are looking for case studies, and there is a difference. Here's how to give buyers what they need, based on insights from our team who have been on both sides of the table.*
+
+---
 
 Buyers seek out case studies to build trust and reduce risk, while analysts, advisors, and influencers use them to validate the category, and when surveyed, marketers say they are essential for building credibility.[^1]
 

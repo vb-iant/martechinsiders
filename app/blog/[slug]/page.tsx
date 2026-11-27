@@ -159,6 +159,7 @@ export default async function BlogPostPage({
                   <h2 className="mb-5 mt-16 font-display text-[1.3rem] font-semibold" {...props} />
                 ),
               em: (props) => <em className="text-void" {...props} />,
+              hr: () => <hr className="my-10 border-hairline" />,
               p: (props) => <p className="my-4 leading-[1.75] text-muted" {...props} />,
               a: (props) => <a className="text-cobalt hover:underline" {...props} />,
               ul: (props) => (
